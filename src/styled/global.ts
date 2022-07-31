@@ -12,10 +12,29 @@ const Global = createGlobalStyle`
     box-sizing: border-box;
     font-size: ${pixelsToRem(16)};    
   }
-  
+  body{
+    display: flex;
+    justify-content: center;
+    color: var(--color-text);
+  }
+  #root{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
   :root{
     //fonts
-    --font:normal 700 ${pixelsToRem(32)}/0 ;
+    --font1:normal 700 ${pixelsToRem(40)}/${pixelsToRem(48)} 'Dancing Script', cursive, sans-serif;
+    --font2:normal 700 ${pixelsToRem(32)}/${pixelsToRem(24)} 'Abel', sans-serif;
+    
+    //colors
+    --color-text:#222;
+
+    //grey
+    --grey-BG:#f8f8f8;
+    --grey:#E7E7E7;
+    /* --grey:#a0a0a0; */
   }
 
   a{

@@ -5,8 +5,10 @@ import * as S from "./styled"
 export const Header:React.FC = () => {
   return (
     <S.Head>
-      <S.Logo>Countries</S.Logo>
-      <S.Logo>theme</S.Logo>
+      <S.SubHeader>
+        <S.Logo>Countries</S.Logo>
+        <S.Theme>theme</S.Theme>
+      </S.SubHeader>
     </S.Head>
   )
 }

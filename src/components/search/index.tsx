@@ -1,8 +1,12 @@
+
 import React from 'react'
+import * as S from "./styled"
 
 const Search:React.FC = () => {
   return (
-    <div>Search</div>
+    <S.Section>
+      <S.SubSection></S.SubSection>
+    </S.Section>
   )
 }
 
