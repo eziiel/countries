@@ -1,4 +1,5 @@
 import React from 'react'
+import { ContextProvider } from '../assets/context'
 import Global from '../styled/global'
 import { Header } from './header'
 import Search from './search'
@@ -9,7 +10,11 @@ const MainPage = () => {
     <>
       <Global />
       <Header />
-      <Search />
+      
+      <ContextProvider>
+        <Search />
+
+      </ContextProvider>
     </>
   )
 }
