@@ -28,7 +28,8 @@ const SearchName = styled.input.attrs({
 })`
   color:#333;
   padding: ${pixelsToRem(8)};
-  width: 300px;
+  font: var(--small);
+  width: 100%;
   border-radius:5px;
   background: var(--grey);
   border: 2px solid var(--grey);
@@ -44,14 +45,17 @@ const SearchName = styled.input.attrs({
     background: #fff;
   }
 `
-
-const Region = styled.div`
-
+const FormCountry = styled.form`
+  height: 100%;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
 export {
   Section,
+  FormCountry,
   SubSection,
   SearchName,
-
 }
