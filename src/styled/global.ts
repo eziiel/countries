@@ -27,14 +27,18 @@ const Global = createGlobalStyle`
     //fonts
     --font1:normal 700 ${pixelsToRem(40)}/${pixelsToRem(48)} 'Dancing Script', cursive, sans-serif;
     --font2:normal 700 ${pixelsToRem(32)}/${pixelsToRem(24)} 'Abel', sans-serif;
-    
+    //small
+    --small:normal 400 ${pixelsToRem(16)}/${pixelsToRem(16)} 'Abel', sans-serif;
+
+
+
+
     //colors
     --color-text:#222;
-
     //grey
     --grey-BG:#f8f8f8;
     --grey:#E7E7E7;
-    /* --grey:#a0a0a0; */
+    --greyDark:#a0a0a0;
   }
 
   a{
@@ -44,8 +48,6 @@ const Global = createGlobalStyle`
   li,ul,ol {
     list-style: none;
   }
-
-
 
 `
 
