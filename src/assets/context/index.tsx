@@ -10,11 +10,11 @@ type PropsInitial = {
 }
 
 const initial = {
-  countries : ["Africa", "America","Asia", "Europe","Oceania"],
+  countries : ["brazil","germany","albania","algeria"],
   setCountries : () => {},
   region:"filter by region",
   setRegion: () => {},
-  regions : ["Africa", "America","Asia", "Europe","Oceania"]
+  regions : ["filter by region", "Africa", "America","Asia", "Europe","Oceania"]
 }
 
 type PropsChildren = {
@@ -29,6 +29,12 @@ const ContextProvider = ({children}:PropsChildren) => {
   const [region,setRegion] = React.useState(initial.region)
   const regions = initial.regions
    
+
+  React.useEffect(() =>{
+    countries[0].trim().length == 0 && setCountries(initial.countries)  
+
+  },[countries])
+
   const data = {
     countries,
     setCountries,

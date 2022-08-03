@@ -1,5 +1,6 @@
 
 import React from 'react'
+import { ContextData } from '../context'
 import * as S from "./styled"
 
 
@@ -7,15 +8,8 @@ interface PropsRegion {
   region:string
 }
 
-const Region = {
-  default: "filter by region"
-}
-
-  const regions = ["Africa", "America","Asia", "Europe","Oceania"]
-
-
 const CheckedRegion:React.FC= () => {
-  const [region,setRegion] = React.useState(Region.default)
+  const { region, regions, setRegion} = React.useContext(ContextData)
   const [statusRegion, setStatusRegion] = React.useState(false)
   const refList = React.useRef<HTMLDivElement>(null)
 

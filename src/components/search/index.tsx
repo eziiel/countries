@@ -5,11 +5,10 @@ import { ContextData } from '../../assets/context'
 import * as S from "./styled"
 
 const Search:React.FC = () => {
-  const { countries } = React.useContext(ContextData)
-  const [country, setCountry] = React.useState(String)
+  const { countries, setCountries } = React.useContext(ContextData)
 
   const handleCountry = (value:string) =>{
-    setCountry(value)
+    setCountries([value])
   }
 
   const handleForm = (e:FormEvent) => {
