@@ -31,7 +31,8 @@ const CheckedRegion:React.FC= () => {
       <S.Checked
         ref={refList}
         onClick={handleList}
-      >{region}</S.Checked>
+        statusRegion ={statusRegion}>
+        {region}</S.Checked>
       <S.Ul 
         statusRegion ={statusRegion}>
           {

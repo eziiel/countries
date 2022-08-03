@@ -18,7 +18,7 @@ const Nav = styled.nav`
   align-items: center;
 ` 
 
-const Checked = styled.div`
+const Checked = styled.div<PropsList>`
   width: 100%;
   height: 39px;
   padding: ${pixelsToRem(8)};
@@ -28,6 +28,10 @@ const Checked = styled.div`
   border: 2px solid var(--grey);
   color: #000;
   cursor: pointer;
+
+  ${props => props.statusRegion && css`
+    background: #fff;
+  `}
 `
 
 
@@ -37,7 +41,7 @@ const Ul = styled.ul<PropsList>`
   border-radius:5px;
   background: var(--grey);
   border: 2px solid var(--grey);
-  bottom:-90%;
+  bottom:-120%;
   transform: translateX(60px);
   transition: .3s ease-in;
   opacity: 0;
@@ -45,6 +49,7 @@ const Ul = styled.ul<PropsList>`
   ${props => props.statusRegion && css`
     opacity: initial;
     transform: initial;
+    background: #fff;
   `}
 
   li{
